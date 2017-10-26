@@ -27,7 +27,7 @@ public class TryBoxLayout4 {
     public static void main(String[] args) {
         Toolkit theKit = aWindow.getToolkit();
         Dimension wndSize = theKit.getScreenSize();
-
+        Dimension d = new Dimension();
         aWindow.setBounds(wndSize.width / 4, wndSize.height / 4, wndSize.width / 2, wndSize.height / 2);
         aWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
