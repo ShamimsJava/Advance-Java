@@ -10,3 +10,16 @@ public class TryWindow {
         aWindow.setVisible(true);
     }
 }
+
+/*
+Class:
+JFrame
+
+Method:
+setBounds()
+setDefaultCloseOperation()
+setVisible()
+
+Attribute:
+JFrame.EXIT_ON_CLOSE
+*/
