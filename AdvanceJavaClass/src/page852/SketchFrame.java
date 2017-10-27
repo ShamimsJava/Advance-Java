@@ -1,4 +1,4 @@
-package page847;
+package page852;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
@@ -7,6 +7,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.KeyStroke;
 
 public class SketchFrame extends JFrame {
 
@@ -18,6 +19,8 @@ public class SketchFrame extends JFrame {
 
         JMenu fileMenu = new JMenu("File");
         JMenu elementMenu = new JMenu("Elements");
+        fileMenu.setMnemonic('F');
+        elementMenu.setMnemonic('E');
 
         newItem = fileMenu.add("New");
         openItem = fileMenu.add("Open");
