@@ -1,5 +1,6 @@
 package page852;
 
+import static java.awt.event.InputEvent.*;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFrame;
@@ -31,6 +32,11 @@ public class SketchFrame extends JFrame {
         fileMenu.addSeparator();
         printItem = fileMenu.add("Print");
 
+        newItem.setAccelerator(KeyStroke.getKeyStroke('N', CTRL_DOWN_MASK));
+        openItem.setAccelerator(KeyStroke.getKeyStroke('O', CTRL_DOWN_MASK));
+        saveItem.setAccelerator(KeyStroke.getKeyStroke('S', CTRL_DOWN_MASK));
+        printItem.setAccelerator(KeyStroke.getKeyStroke('P', CTRL_DOWN_MASK));
+        
         elementMenu.add(lineItem = new JRadioButtonMenuItem("Line", true));
         elementMenu.add(rectangleItem = new JRadioButtonMenuItem("Rectangle", false));
         elementMenu.add(cirleItem = new JRadioButtonMenuItem("Circle", false));
@@ -42,20 +48,26 @@ public class SketchFrame extends JFrame {
         types.add(cirleItem);
         types.add(curveItem);
 
+        lineItem.setAccelerator(KeyStroke.getKeyStroke('L', CTRL_DOWN_MASK));
+        rectangleItem.setAccelerator(KeyStroke.getKeyStroke('E', CTRL_DOWN_MASK));
+        cirleItem.setAccelerator(KeyStroke.getKeyStroke('I', CTRL_DOWN_MASK));
+        curveItem.setAccelerator(KeyStroke.getKeyStroke('V', CTRL_DOWN_MASK));
+        
         elementMenu.addSeparator();
 
         JMenu colorMenu = new JMenu("Color");
         elementMenu.add(colorMenu);
 
-//        elementMenu.add(redItem = new JCheckBoxMenuItem("Red", false));
-//        elementMenu.add(yellowItem = new JCheckBoxMenuItem("Yellow", false));
-//        elementMenu.add(greenItem = new JCheckBoxMenuItem("Green", false));
-//        elementMenu.add(blueItem = new JCheckBoxMenuItem("Blue", true));
         colorMenu.add(redItem = new JCheckBoxMenuItem("Red", false));
         colorMenu.add(yellowItem = new JCheckBoxMenuItem("Yellow", false));
         colorMenu.add(greenItem = new JCheckBoxMenuItem("Green", false));
         colorMenu.add(blueItem = new JCheckBoxMenuItem("Blue", true));
 
+        redItem.setAccelerator(KeyStroke.getKeyStroke('R', CTRL_DOWN_MASK));
+        yellowItem.setAccelerator(KeyStroke.getKeyStroke('Y', CTRL_DOWN_MASK));
+        greenItem.setAccelerator(KeyStroke.getKeyStroke('G', CTRL_DOWN_MASK));
+        blueItem.setAccelerator(KeyStroke.getKeyStroke('B', CTRL_DOWN_MASK));
+        
         menuBar.add(fileMenu);
         menuBar.add(elementMenu);
     }

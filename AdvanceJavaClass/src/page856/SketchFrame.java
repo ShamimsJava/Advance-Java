@@ -1,5 +1,6 @@
-package page847;
+package page856;
 
+import static java.awt.event.InputEvent.*;
 import javax.swing.ButtonGroup;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JFrame;
@@ -19,6 +20,8 @@ public class SketchFrame extends JFrame {
 
         JMenu fileMenu = new JMenu("File");
         JMenu elementMenu = new JMenu("Elements");
+        fileMenu.setMnemonic('F');
+        elementMenu.setMnemonic('E');
 
         newItem = fileMenu.add("New");
         openItem = fileMenu.add("Open");
@@ -28,7 +31,12 @@ public class SketchFrame extends JFrame {
         saveAsItem = fileMenu.add("Save As...");
         fileMenu.addSeparator();
         printItem = fileMenu.add("Print");
-      
+
+        newItem.setAccelerator(KeyStroke.getKeyStroke('N', CTRL_DOWN_MASK));
+        openItem.setAccelerator(KeyStroke.getKeyStroke('O', CTRL_DOWN_MASK));
+        saveItem.setAccelerator(KeyStroke.getKeyStroke('S', CTRL_DOWN_MASK));
+        printItem.setAccelerator(KeyStroke.getKeyStroke('P', CTRL_DOWN_MASK));
+        
         elementMenu.add(lineItem = new JRadioButtonMenuItem("Line", true));
         elementMenu.add(rectangleItem = new JRadioButtonMenuItem("Rectangle", false));
         elementMenu.add(cirleItem = new JRadioButtonMenuItem("Circle", false));
@@ -40,6 +48,11 @@ public class SketchFrame extends JFrame {
         types.add(cirleItem);
         types.add(curveItem);
 
+        lineItem.setAccelerator(KeyStroke.getKeyStroke('L', CTRL_DOWN_MASK));
+        rectangleItem.setAccelerator(KeyStroke.getKeyStroke('E', CTRL_DOWN_MASK));
+        cirleItem.setAccelerator(KeyStroke.getKeyStroke('I', CTRL_DOWN_MASK));
+        curveItem.setAccelerator(KeyStroke.getKeyStroke('V', CTRL_DOWN_MASK));
+        
         elementMenu.addSeparator();
 
         JMenu colorMenu = new JMenu("Color");
@@ -50,6 +63,11 @@ public class SketchFrame extends JFrame {
         colorMenu.add(greenItem = new JCheckBoxMenuItem("Green", false));
         colorMenu.add(blueItem = new JCheckBoxMenuItem("Blue", true));
 
+        redItem.setAccelerator(KeyStroke.getKeyStroke('R', CTRL_DOWN_MASK));
+        yellowItem.setAccelerator(KeyStroke.getKeyStroke('Y', CTRL_DOWN_MASK));
+        greenItem.setAccelerator(KeyStroke.getKeyStroke('G', CTRL_DOWN_MASK));
+        blueItem.setAccelerator(KeyStroke.getKeyStroke('B', CTRL_DOWN_MASK));
+        
         menuBar.add(fileMenu);
         menuBar.add(elementMenu);
     }
