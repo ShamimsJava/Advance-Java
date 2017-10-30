@@ -1,42 +1,51 @@
 package test2;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class RetriveData extends javax.swing.JFrame {
+
     private String name;
     private String sex;
-    private String hobby = "";
+    private String hobby;
     private String country;
-    
-    public void checkMethod(){
+
+    public void checkMethod() {
         name = txtName.getText();
-        if(txtName.getText().isEmpty()){
+        if (txtName.getText().isEmpty()) {
             JOptionPane.showMessageDialog(rootPane, "Please enter your name.");
             txtName.requestFocus();
         }
-        
-        if(rdMale.isSelected()){
+
+        if (rdMale.isSelected()) {
             sex = "Male";
-        }else if(rdFemale.isSelected()){
+        } else if (rdFemale.isSelected()) {
             sex = "Female";
-        }else{
+        } else {
             JOptionPane.showMessageDialog(rootPane, "Please select gender.");
         }
-        
-        if(ckReading.isSelected())
+
+        hobby = "";
+        if (ckReading.isSelected()) {
             hobby += "Reading";
-        if(ckWriting.isSelected())
-            hobby += "Writing";
-        if(ckCoding.isSelected())
-            hobby += "Coding";
-        if(hobby.isEmpty())
+        }
+        if (ckWriting.isSelected()) {
+            hobby += " Writing";
+        }
+        if (ckCoding.isSelected()) {
+            hobby += " Coding";
+        }
+        if (hobby.isEmpty()) {
             JOptionPane.showMessageDialog(rootPane, "Please Enter your hobby.");
-        
-        
-        if(cmCountry.equals("-Select One-"))
-            JOptionPane.showMessageDialog(rootPane, "Please enter your country");
+        }
+
+        if (cmCountry.getSelectedItem().toString().equals("-SelectOne-")) {
+            JOptionPane.showMessageDialog(rootPane, "Please Enter your country.");
+        }
         country = cmCountry.getSelectedItem().toString();
+
     }
+
     public RetriveData() {
         initComponents();
     }
@@ -66,6 +75,7 @@ public class RetriveData extends javax.swing.JFrame {
         tblDisplay = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("General Information");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -89,7 +99,7 @@ public class RetriveData extends javax.swing.JFrame {
 
         jLabel4.setText("Country");
 
-        cmCountry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-Select One-", "Bangladesh", "America", "England", "Chaina", "Japan", "Rasia", "Canada", "Swiden" }));
+        cmCountry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-SelectOne-", "Bangladesh", "America", "England", "Chaina", "Japan", "Rasia", "Canada", "Swiden" }));
 
         btnCheck.setText("Check");
         btnCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +109,11 @@ public class RetriveData extends javax.swing.JFrame {
         });
 
         btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -112,24 +127,26 @@ public class RetriveData extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
                 .addGap(43, 43, 43)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(rdMale)
-                        .addGap(38, 38, 38)
+                        .addGap(69, 69, 69)
                         .addComponent(rdFemale))
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ckReading)
-                        .addGap(10, 10, 10)
-                        .addComponent(ckWriting)
-                        .addGap(18, 18, 18)
-                        .addComponent(ckCoding))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtName)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(cmCountry, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(ckReading)
+                                .addGap(10, 10, 10)
+                                .addComponent(ckWriting)))
+                        .addGap(18, 18, 18)
+                        .addComponent(ckCoding)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,9 +220,7 @@ public class RetriveData extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 5, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -216,17 +231,24 @@ public class RetriveData extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(434, 529));
+        setSize(new java.awt.Dimension(469, 529));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
         checkMethod();
     }//GEN-LAST:event_btnCheckActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        checkMethod();
+        Object[] arr = {name, sex, hobby, country};
+        DefaultTableModel model = (DefaultTableModel) tblDisplay.getModel();
+        model.addRow(arr);
+    }//GEN-LAST:event_btnAddActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
