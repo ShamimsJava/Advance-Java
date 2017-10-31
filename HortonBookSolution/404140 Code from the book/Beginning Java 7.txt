@@ -1,0 +1,23 @@
+Beginning Java 7 - Code from the Book
+
+Dear Reader,
+All the code for working examples from a chapter is in its own folder; code from Chapter 2 is in ch02, code from Chapter 3 is in ch03,
+and so on.
+Where an example consists of a single .java source file, the file appears directly in the chapter folder.
+The code for an example that consists of two or more files is in its own subfolder of the chapter folder. The name of the subfolder
+that contains the source files for an example appears in the book.
+
+Applets that require an HTML file to execute always appear in their own subfolder, which contains the source file and the .html file.
+
+The Sketcher example that evolves over several chapters needs icons for toolbar buttons and menu items.
+My icons appear in the Images folder but you can also use your own icons.
+The code for the examples from Chapter 11 process a number of data files that you should have created yourself.
+In case that didn't work out, my versions of the data files appear in the "ch11/Beginning Java Stuff" folder.
+
+Note that the layout of the code in these files may be different from how the corresponding code appears in the book.
+This is because code the code often has to be rearranged to fit within the width of a page.
+
+Have fun!
+Ivor Horton
+
+

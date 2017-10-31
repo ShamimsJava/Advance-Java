@@ -1,0 +1,54 @@
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class TestDataObjects {
+  public static void main(String[] args) {
+    Data data = new Data(1);
+     Path file = Paths.get("C:/Beg Java Stuff/dataObjects.bin");
+    try {
+      // Create the object output stream
+      ObjectOutputStream objectOut = new ObjectOutputStream(new BufferedOutputStream(file.newOutputStream()));
+
+      // Write three variants of the object to the file
+      objectOut.writeObject(data);                                     // Write object
+      System.out.println("1st Object written has value: "+data.getValue());
+      data.setValue(2);                                                // Modify the object
+      objectOut.writeObject(data);                                     // and write it again
+      System.out.println("2nd Object written has value: "+data.getValue());
+      data.setValue(3);                                                // Modify the object again...
+      objectOut.writeObject(data);                                     // and write it once more
+      System.out.println("3rd Object written has value: "+data.getValue());
+      objectOut.close();                                               // Close the output stream
+
+    } catch(IOException e) {
+      e.printStackTrace();
+      System.exit(1);
+    }
+
+    // Read the three objects back from the file
+    System.out.println("\nReading objects from the file: ");
+    try {ObjectInputStream objectIn = new ObjectInputStream(new BufferedInputStream(file.newInputStream()));
+
+      Data data1 = (Data)objectIn.readObject();
+      Data data2 = (Data)objectIn.readObject();
+      Data data3 = (Data)objectIn.readObject();
+      System.out.println("1st object is " + (data1.equals(data2)? "" : "not ")
+                       + "Equal to 2nd object.");
+      System.out.println("2nd object is " + (data2.equals(data3)? "" : "not ")
+                       + "Equal to 3rd object.");
+
+      System.out.println("data1 = "+data1.getValue()                   // Display object values
+                       + "  data2 = " + data2.getValue()
+                       + "  data3 = "+data3.getValue());
+      objectIn.close();                                                // Close the input stream
+
+    } catch(ClassNotFoundException e) {
+      e.printStackTrace();
+      System.exit(1);
+    } catch(IOException e) {
+      e.printStackTrace();
+      System.exit(1);
+    }
+  }
+}
