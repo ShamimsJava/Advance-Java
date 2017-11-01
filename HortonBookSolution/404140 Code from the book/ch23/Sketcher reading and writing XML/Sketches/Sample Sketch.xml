@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sketch SYSTEM "D:/Beg Java Stuff/sketcher.dtd">
+<sketch>
+<line angle="0.0">
+<color B="255" G="0" R="0"/>
+<position x="147" y="67"/>
+<bounds height="54" width="108" x="147" y="67"/>
+<endpoint x="107.0" y="53.0"/>
+</line>
+<rectangle angle="0.0" height="72.0" width="110.0">
+<color B="255" G="0" R="0"/>
+<position x="339" y="73"/>
+<bounds height="73" width="111" x="339" y="73"/>
+</rectangle>
+<circle angle="0.0" diameter="90.0">
+<color B="255" G="0" R="0"/>
+<position x="136" y="124"/>
+<bounds height="91" width="91" x="136" y="124"/>
+</circle>
+<curve angle="0.0">
+<color B="255" G="0" R="0"/>
+<position x="310" y="202"/>
+<bounds height="24" width="94" x="310" y="182"/>
+<point x="1.0" y="-1.0"/>
+<point x="2.0" y="-3.0"/>
+<point x="3.0" y="-4.0"/>
+<point x="4.0" y="-5.0"/>
+<point x="4.0" y="-7.0"/>
+<point x="6.0" y="-11.0"/>
+<point x="7.0" y="-13.0"/>
+<point x="7.0" y="-14.0"/>
+<point x="9.0" y="-15.0"/>
+<point x="9.0" y="-16.0"/>
+<point x="11.0" y="-16.0"/>
+<point x="11.0" y="-17.0"/>
+<point x="12.0" y="-17.0"/>
+<point x="12.0" y="-18.0"/>
+<point x="13.0" y="-18.0"/>
+<point x="13.0" y="-19.0"/>
+<point x="15.0" y="-19.0"/>
+<point x="16.0" y="-19.0"/>
+<point x="17.0" y="-19.0"/>
+<point x="18.0" y="-19.0"/>
+<point x="19.0" y="-20.0"/>
+<point x="20.0" y="-20.0"/>
+<point x="23.0" y="-20.0"/>
+<point x="26.0" y="-20.0"/>
+<point x="29.0" y="-20.0"/>
+<point x="30.0" y="-20.0"/>
+<point x="31.0" y="-18.0"/>
+<point x="32.0" y="-17.0"/>
+<point x="32.0" y="-15.0"/>
+<point x="33.0" y="-15.0"/>
+<point x="33.0" y="-14.0"/>
+<point x="34.0" y="-14.0"/>
+<point x="35.0" y="-13.0"/>
+<point x="35.0" y="-12.0"/>
+<point x="36.0" y="-12.0"/>
+<point x="36.0" y="-11.0"/>
+<point x="37.0" y="-10.0"/>
+<point x="38.0" y="-9.0"/>
+<point x="38.0" y="-8.0"/>
+<point x="39.0" y="-7.0"/>
+<point x="40.0" y="-6.0"/>
+<point x="41.0" y="-6.0"/>
+<point x="41.0" y="-5.0"/>
+<point x="42.0" y="-4.0"/>
+<point x="43.0" y="-4.0"/>
+<point x="44.0" y="-3.0"/>
+<point x="48.0" y="-3.0"/>
+<point x="52.0" y="-2.0"/>
+<point x="55.0" y="0.0"/>
+<point x="57.0" y="0.0"/>
+<point x="58.0" y="1.0"/>
+<point x="61.0" y="2.0"/>
+<point x="66.0" y="2.0"/>
+<point x="68.0" y="3.0"/>
+<point x="69.0" y="3.0"/>
+<point x="71.0" y="3.0"/>
+<point x="72.0" y="3.0"/>
+<point x="76.0" y="3.0"/>
+<point x="77.0" y="3.0"/>
+<point x="79.0" y="3.0"/>
+<point x="81.0" y="3.0"/>
+<point x="82.0" y="3.0"/>
+<point x="83.0" y="3.0"/>
+<point x="84.0" y="3.0"/>
+<point x="85.0" y="2.0"/>
+<point x="85.0" y="1.0"/>
+<point x="87.0" y="0.0"/>
+<point x="88.0" y="-1.0"/>
+<point x="89.0" y="-2.0"/>
+<point x="90.0" y="-3.0"/>
+<point x="91.0" y="-4.0"/>
+<point x="91.0" y="-5.0"/>
+<point x="92.0" y="-7.0"/>
+<point x="92.0" y="-9.0"/>
+<point x="93.0" y="-10.0"/>
+<point x="93.0" y="-11.0"/>
+<point x="93.0" y="-12.0"/>
+<point x="93.0" y="-13.0"/>
+<point x="92.0" y="-13.0"/>
+</curve>
+<text angle="0.0" maxascent="21">
+<color B="255" G="0" R="0"/>
+<position x="201" y="259"/>
+<bounds height="30" width="163" x="201" y="259"/>
+<font fontname="Serif" fontstyle="bold" pointsize="20"/>
+<string>The Complete Set!</string>
+</text>
+</sketch>

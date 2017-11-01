@@ -1,0 +1,6 @@
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\Element.java"
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\Sketcher.java"
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\SketcherFrame.java"
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\SketcherModel.java"
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\SketcherView.java"
+"D:\\Beginning Java 7 e-Books\\Code\\404140 Code from the book\\ch19\\Sketcher 7 with a crosshair cursor\\Constants\\SketcherConstants.java"

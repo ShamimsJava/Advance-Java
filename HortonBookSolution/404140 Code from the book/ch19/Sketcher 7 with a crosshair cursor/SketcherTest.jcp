@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<settings>
+		<label>SketcherTest</label>
+		<root_path>\</root_path>
+		<output_path>\</output_path>
+		<source_path>\</source_path>
+		<jdkprofile_ref/>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<ant_events/>
+	<run_items/>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref/>
+			<applet_ref/>
+			<debugger_ref/>
+			<param/>
+			<run>Sketcher</run>
+			<verify>true</verify>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<folderitem>
+				<path>Constants</path>
+			</folderitem>
+			<fileitem>
+				<path>Element.java</path>
+			</fileitem>
+			<fileitem>
+				<path>Sketcher.java</path>
+			</fileitem>
+			<fileitem>
+				<path>SketcherFrame.java</path>
+			</fileitem>
+			<fileitem>
+				<path>SketcherModel.java</path>
+			</fileitem>
+			<fileitem>
+				<path>SketcherView.java</path>
+			</fileitem>
+			<fileitem>
+				<path>Constants\SketcherConstants.java</path>
+				<folder>Constants</folder>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>
