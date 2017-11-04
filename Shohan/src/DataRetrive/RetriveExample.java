@@ -18,9 +18,9 @@ public class RetriveExample extends javax.swing.JFrame {
         name = txtName.getText();
 
         if (rdMale.isSelected()) {
-            gender = "Male";
+            gender = rdMale.getText();
         } else if (rdFemale.isSelected()) {
-            gender = "Female";
+            gender = rdFemale.getText();
         } else {
             JOptionPane.showMessageDialog(rootPane, "Please enter your gender.");
         }
@@ -274,9 +274,6 @@ public class RetriveExample extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
