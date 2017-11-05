@@ -135,7 +135,6 @@ public class DataRetrive extends javax.swing.JFrame {
         });
 
         btnClear.setText("Clear");
-        btnClear.setActionCommand("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClearActionPerformed(evt);
@@ -302,10 +301,10 @@ public class DataRetrive extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(367, 553));
+        setSize(new java.awt.Dimension(367, 538));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
