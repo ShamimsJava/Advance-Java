@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circle SYSTEM "CircleXML.dtd">
+<circle>
+    <radius>15</radius>
+    <position>
+        <x-coordinate>30</x-coordinate>
+        <y-coordinate>50</y-coordinate>
+    </position>
+</circle>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentList SYSTEM "StudentList.dtd">
+<studentList>
+    <student>
+        <id>101</id>
+        <name>Shamim</name>
+        <age>26</age>
+        <email>shamimsjava@gmail.com</email>
+        <address></address>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Sarker</name>
+        <age>26</age>
+        <email>shamimjava@gmail.com</email>
+        <address></address>
+    </student>
+</studentList>
