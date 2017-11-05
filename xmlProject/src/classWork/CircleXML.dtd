@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!ELEMENT circle (radius|position)*>
+<!ELEMENT radius (#PCDATA)>
+<!ELEMENT position (x-coordinate|y-coordinate)*>
+<!ELEMENT x-coordinate (#PCDATA)>
+<!ELEMENT y-coordinate (#PCDATA)>
