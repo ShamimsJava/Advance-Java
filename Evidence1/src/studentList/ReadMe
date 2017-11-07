@@ -1,0 +1,30 @@
+----------------------------
+Advanced Java Evidence Task
+----------------------------
+
+Part-1:
+A. Layout Analysis and Design: 
+    i. We shall take 3 panels, one is for title of of overall task.
+    ii. Left panel will contain form
+    iii. Right panel will contain data table
+    iv. Form design, look a java code
+
+B. Purpose of design:
+    i. To add retrieve data from form and write to table.
+    ii. To clear the form fields
+    iii. To clear table
+    iv. To exit from page
+    v. To write data to file.
+    vi. To read from file
+
+Part-2:
+A. Create a domain class like Student
+    i. Fields(String name, String email, String email, int age, String gender, String hobby, String round, String note)
+B. Working with add button
+C. Working with clear form field button
+D. Working with clear table
+E. Working with exit button
+F. Working with write to txt file button
+    i. Make an Util class and create two methods for writing to and reading from file.
+G. Working with display data into table from file button
+H. Done.
