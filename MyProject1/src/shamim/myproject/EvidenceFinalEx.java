@@ -377,7 +377,7 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnClearTable)
@@ -385,10 +385,9 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnDataFromFile)
-                            .addComponent(btnExit))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(btnExit)))
                     .addComponent(btnAddTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(204, 255, 255));
@@ -450,7 +449,7 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(1118, 588));
+        setSize(new java.awt.Dimension(1118, 620));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
