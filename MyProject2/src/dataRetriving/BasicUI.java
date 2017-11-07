@@ -1,8 +1,9 @@
 package dataRetriving;
 
-import java.io.File;
-import javax.swing.JFileChooser;
-import javax.swing.JOptionPane;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class BasicUI extends javax.swing.JFrame {
@@ -10,8 +11,8 @@ public class BasicUI extends javax.swing.JFrame {
     private String name, address, country, gender, degree = "", gap = " ";
     JFileChooser fc;
     File dir;
-    
-    
+    File file = null;
+
     public BasicUI() {
         initComponents();
     }
@@ -175,6 +176,11 @@ public class BasicUI extends javax.swing.JFrame {
         dtnTable.setText("Display In Table");
 
         btnArea.setText("Display In Area");
+        btnArea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAreaActionPerformed(evt);
+            }
+        });
 
         btnClear.setText("Clear");
 
@@ -186,16 +192,16 @@ public class BasicUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnSave)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dtnTable)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnArea)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnClear)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnExit)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
+                .addComponent(dtnTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnClear, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,7 +224,7 @@ public class BasicUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addComponent(jScrollPane2)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
@@ -248,51 +254,123 @@ public class BasicUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // save button
-        getAllRecord();
+        try {
+            getAllRecord();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void getAllRecord(){
-        if(txtName.getText().isEmpty()){
+    private void btnAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreaActionPerformed
+        displayArea();
+    }//GEN-LAST:event_btnAreaActionPerformed
+
+    private void getAllRecord() throws IOException {
+        if (txtName.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Insert your name.");
             txtName.requestFocus();
-        }else{
+        } else {
             name = txtName.getText();
             address = txtAddress.getText();
             country = cmCountry.getSelectedItem().toString();
-            
-            if(rdMale.isSelected()){
+
+            if (rdMale.isSelected()) {
                 gender = rdMale.getText();
             }
-            if(rdFemale.isSelected()){
+            if (rdFemale.isSelected()) {
                 gender = rdFemale.getText();
             }
-            
-            if(ckSSC.isSelected()){
+
+            if (ckSSC.isSelected()) {
                 degree += ckSSC.getText() + gap;
             }
-            if(ckHSC.isSelected()){
+            if (ckHSC.isSelected()) {
                 degree += ckHSC.getText() + gap;
             }
-            if(ckBSC.isSelected()){
+            if (ckBSC.isSelected()) {
                 degree += ckBSC.getText() + gap;
             }
-            if(ckMSC.isSelected()){
+            if (ckMSC.isSelected()) {
                 degree += ckMSC.getText() + gap;
             }
-            
+
             fc = new JFileChooser(dir);
             FileNameExtensionFilter filter;
             filter = new FileNameExtensionFilter("*.txt", new String[]{"txt"});
             fc.addChoosableFileFilter(filter);
             int option = fc.showSaveDialog(this);
-            if(option==JFileChooser.APPROVE_OPTION){
+            if (option == JFileChooser.APPROVE_OPTION) {
                 dir = fc.getCurrentDirectory();
+                file = fc.getSelectedFile();
+                writeAll();
             }
-            
+            degree = "";
         }
     }
-    
+
+    private void writeAll() throws IOException {
+        BufferedWriter buf = null;
+        try {
+            buf = new BufferedWriter(new FileWriter(file + getExtension(), true));
+            buf.write(name + ", " + address + ", " + country + ", " + gender + ", " + degree);
+            buf.newLine();
+            JOptionPane.showMessageDialog(rootPane, "Data Saved");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (buf != null) {
+                buf.close();
+            }
+        }
+
+    }
+
+    private String getExtension() {
+        String ext = "";
+        String extension = fc.getFileFilter().getDescription();
+        if (extension.equals("*.txt")) {
+            ext = ".txt";
+        }
+        return ext;
+    }
+
+    private void displayArea() {
+        FileInputStream fobj = null;
+        fc = new JFileChooser(dir);
+        int option = fc.showOpenDialog(this);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            file = fc.getSelectedFile();
+            dir = fc.getCurrentDirectory();
+            try {
+                String str = "";
+                fobj = new FileInputStream(file);
+                int len = (int) file.length();
+                for (int i = 0; i < len; i++) {
+                    char str2 = 0;
+                    try {
+                        str2 = (char) fobj.read();
+                        if (str2 == ',') {
+                            str2 = '\t';
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    str = str + str2;
+                }
+                arDisplay.setText(str);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (fobj != null) {
+                        fobj.close();
+                    }
+                } catch (Exception e) {
+                }
+            }
+        }
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
