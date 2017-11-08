@@ -83,10 +83,9 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
             }
             
             try {
-                Utils.writeTofile("student", students);
-                
+                Utils.writeTofile("student", students);       
             } catch (Exception e) {
-                Logger.getLogger(EvidenceFinalEx.class.getName()).log(Level.SEVERE, null, e);
+               e.printStackTrace();
             }
             
             lblMsg.setText("All information inserted successfully.");

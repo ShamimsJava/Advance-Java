@@ -10,8 +10,8 @@ public class WriteFile {
         file.createNewFile();
         
         FileWriter fileWriter = new FileWriter(file, true);
-        PrintWriter printWriter = new PrintWriter(fileWriter);
-        printWriter.append(s.getName()+" "+s.getAddress());
-        printWriter.close();
+        try (PrintWriter printWriter = new PrintWriter(fileWriter)) {
+            printWriter.append(s.getName()+" "+s.getAddress());
+        }
     }
 }
