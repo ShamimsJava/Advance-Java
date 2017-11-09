@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<company>
+    <staff>
+        <fullname>Atik</fullname>
+        <salary>300000</salary>
+        <age>28</age>
+    </staff>
+</company>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<company>
+    <staff>
+        <fullname>Atik</fullname>
+        <salary>300000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Sohan</fullname>
+        <salary>100000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Urmi</fullname>
+        <salary>200000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Firoza</fullname>
+        <salary>400000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Parvez</fullname>
+        <salary>500000</salary>
+        <age>25</age>
+    </staff>
+    
+     <staff>
+        <fullname>Shabib</fullname>
+        <salary>600000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Shahriar</fullname>
+        <salary>700000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Bipul</fullname>
+        <salary>200000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Shihab</fullname>
+        <salary>900000</salary>
+        <age>25</age>
+    </staff>
+    
+    <staff>
+        <fullname>Rahman</fullname>
+        <salary>800000</salary>
+        <age>25</age>
+    </staff>
+</company>
