@@ -2,7 +2,7 @@ package shamim.myproject;
 
 public class Student {
 
-    private String name;
+    public String name;
     private String email;
     private int age;
     private String gender;

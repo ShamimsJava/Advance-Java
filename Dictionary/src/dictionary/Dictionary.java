@@ -135,26 +135,97 @@ public class Dictionary extends javax.swing.JFrame {
 
     private void getMeaning() {
         String word = txtWord.getText();
-        
+
         switch (word) {
             case "father":
-                txtMeaning.setText("Male Parent");
+                txtMeaning.setText(" noun\n"
+                        + "1.\n"
+                        + "a male parent.\n"
+                        + "2.\n"
+                        + "a father-in-law, stepfather, or adoptive father.\n"
+                        + "3.\n"
+                        + "any male ancestor, especially the founder of a family or line; progenitor.\n"
+                        + "4.\n"
+                        + "a man who exercises paternal care over other persons; paternal protector or provider:\n"
+                        + "a father to the poor.\n"
+                        + "5.\n"
+                        + "a person who has originated or established something:\n"
+                        + "the father of modern psychology; the founding fathers.\n"
+                        + "6.\n"
+                        + "a precursor, prototype, or early form:\n"
+                        + "The horseless carriage was the father of the modern automobile.\n"
+                        + "7.\n"
+                        + "one of the leading men in a city, town, etc.:\n"
+                        + "a scandal involving several of the city fathers.");
                 break;
             case "mother":
-                txtMeaning.setText("Female Parent");
+                txtMeaning.setText(" noun\n"
+                        + "1.\n"
+                        + "a female parent.\n"
+                        + "2.\n"
+                        + "(often initial capital letter) one's female parent.\n"
+                        + "3.\n"
+                        + "a mother-in-law, stepmother, or adoptive mother. \n"
+                        + "Explore Dictionary.com\n"
+                        + "11 Insults We Should Bring Back\n"
+                        + "The Saddest Words in English\n"
+                        + "Avoid These Words. Seriously.\n"
+                        + "What's the word for how it smells after it rains?\n"
+                        + "4.\n"
+                        + "a term of address for a female parent or a woman having or regarded as having the status, function, or authority of a female parent.\n"
+                        + "5.\n"
+                        + "a term of familiar address for an old or elderly woman.\n"
+                        + "6.\n"
+                        + "mother superior.\n"
+                        + "7.\n"
+                        + "a woman exercising control, influence, or authority like that of a mother:\n"
+                        + "to be a mother to someone.");
                 break;
             case "brother":
-                txtMeaning.setText("Male sibling");
+                txtMeaning.setText(" noun, plural brothers (Archaic) brethren.\n"
+                        + "1.\n"
+                        + "a male offspring having both parents in common with another offspring; a male sibling.\n"
+                        + "2.\n"
+                        + "Also called half brother. a male offspring having only one parent in common with another offspring.\n"
+                        + "3.\n"
+                        + "a stepbrother.\n"
+                        + "4.\n"
+                        + "a male numbered among the same kinship group, nationality, ethnicity, profession, etc., as another; an associate; a fellow member, fellow countryman, fellow man, etc.:\n"
+                        + "a fraternity brother.\n"
+                        + "5.\n"
+                        + "Ecclesiastical.\n"
+                        + "\n"
+                        + "    (often initial capital letter) a male numbered among the lay members of a religious organization that has a priesthood.\n"
+                        + "    a man who devotes himself to the duties of a religious order without taking holy orders, or while preparing for holy orders.\n"
+                        + "\n"
+                        + "6.\n"
+                        + "brothers, all members of a particular racial or ethnic group, or of the human race in general:\n"
+                        + "All men are brothers.\n"
+                        + "7.\n"
+                        + "Slang. fellow; buddy:\n"
+                        + "Brother, can you spare a dime?");
                 break;
             case "sister":
-                txtMeaning.setText("Female sibling");
-                break;
-            case "wife":
-                txtMeaning.setText("My child mother");
+                txtMeaning.setText(" noun\n"
+                        + "1.\n"
+                        + "a female offspring having both parents in common with another offspring; female sibling.\n"
+                        + "2.\n"
+                        + "Also called half sister. a female offspring having only one parent in common with another offspring.\n"
+                        + "3.\n"
+                        + "stepsister.\n"
+                        + "4.\n"
+                        + "a female friend or protector regarded as a sister.\n"
+                        + "5.\n"
+                        + "a thing regarded as feminine and associated as if by kinship with something else:\n"
+                        + "The ships are sisters.\n"
+                        + "6.\n"
+                        + "a female fellow member, as of a church.\n"
+                        + "7.\n"
+                        + "a female member of a religious community that observes the simple vows of poverty, chastity, and obedience.");
                 break;
             default:
                 txtMeaning.setText("");
-        }  
+        }
     }
 
     public static void main(String args[]) {

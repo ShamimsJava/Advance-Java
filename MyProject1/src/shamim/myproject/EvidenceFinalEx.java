@@ -2,8 +2,6 @@ package shamim.myproject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -65,14 +63,14 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
             }
             
             Student student = new Student(name, Integer.parseInt(age), email, gender, hobby, round, note);
-            List<Student> students = new ArrayList<Student>();
+            List<Student> students = new ArrayList<>();
             students.add(student);
             
             DefaultTableModel model = (DefaultTableModel)tblDisplay.getModel();
             Object[] col = new Object[7];
             
             for (int i = 0; i < students.size(); i++) {
-                col[0] = students.get(i).getName();
+                col[0] = students.get(i).name;
                 col[1] = students.get(i).getAge();
                 col[2] = students.get(i).getEmail();
                 col[3] = students.get(i).getGender();
@@ -83,7 +81,8 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
             }
             
             try {
-                Utils.writeTofile("student", students);       
+                Utils u = new Utils();
+                u.writeTofile("urmi", students);       
             } catch (Exception e) {
                e.printStackTrace();
             }

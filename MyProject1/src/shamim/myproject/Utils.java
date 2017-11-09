@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Utils {
 
-    public static void writeTofile(String filename, List<Student> students) throws Exception {
+    public void writeTofile(String filename, List<Student> students) throws Exception {
         File destFile = new File(filename + ".txt");
         try {
             if (destFile.exists() == false) {
