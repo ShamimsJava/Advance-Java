@@ -82,7 +82,7 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
             
             try {
                 Utils u = new Utils();
-                u.writeTofile("urmi", students);       
+                u.writeTofile("shamim", students);       
             } catch (Exception e) {
                e.printStackTrace();
             }
@@ -482,7 +482,7 @@ public class EvidenceFinalEx extends javax.swing.JFrame {
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(cols);
         tblDisplay.setModel(model);
-        Utils.displayStudentsdataFromFile("student", model);
+        //Utils.displayStudentsdataFromFile("student", model);
     }//GEN-LAST:event_btnDataFromFileActionPerformed
 
     private void tblDisplayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblDisplayMouseClicked

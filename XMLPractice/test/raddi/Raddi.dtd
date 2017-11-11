@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT aliens (alien)*>
+<!ELEMENT alien (name|salary)*>
+<!ATTLIST alien
+    aid CDATA #IMPLIED
+    lang CDATA #IMPLIED
+  >
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>

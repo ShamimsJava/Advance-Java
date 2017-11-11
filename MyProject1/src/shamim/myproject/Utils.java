@@ -19,7 +19,9 @@ public class Utils {
                 System.out.println("We had to make a new file.");
                 destFile.createNewFile();
             }
-            try (PrintWriter printWriter = new PrintWriter(new FileWriter(destFile, true))) {
+            
+            FileWriter fileWriter = new FileWriter(destFile, true);
+            try (PrintWriter printWriter = new PrintWriter(fileWriter)) {
                 students.forEach((s) -> {
                     printWriter.append(s.getName() + ", " + s.getAge()+ ", " + s.getEmail()  + ", " + s.getGender() + ", " + s.getHobby() + ", " + s.getRound() + ", " + s.getNote() + "\n");
                 });

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <class>
-    <student rollno="393">
+    <student rollno="393" lang = "Java">
         <firstname>dinkar</firstname>
         <lastname>kad</lastname>
         <nickname>dinkar</nickname>
         <marks>85</marks>
     </student>
-    <student rollno="493">
+    <student rollno="493" lang = "Python">
         <firstname>Vaneet</firstname>
         <lastname>Gupta</lastname>
         <nickname>vinni</nickname>
         <marks>95</marks>
     </student>
-    <student rollno="593">
+    <student rollno="593" lang = "C#">
         <firstname>jasvir</firstname>
         <lastname>singn</lastname>
         <nickname>jazz</nickname>

@@ -10,9 +10,6 @@ public class Student {
     private String round;
     private String note;
 
-    public Student() {
-    }
-
     public Student(String name, int age, String email,  String gender, String hobby, String round, String note) {
         this.name = name;
         this.email = email;

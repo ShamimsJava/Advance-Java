@@ -16,26 +16,30 @@ public class DomParserDemo {
             File inputFile = new File("D:\\IDB-BISEW\\Git_Advance-Java\\XMLPractice\\src\\domParser\\Demo.xml");
             SAXBuilder saxBuilder = new SAXBuilder();
             Document document = saxBuilder.build(inputFile);
-            System.out.println("Root element :"
-                    + document.getRootElement().getName());
             Element classElement = document.getRootElement();
+            
+            System.out.println("Root element :" + classElement.getName());
+            
+            
             List<Element> studentList = classElement.getChildren();
+            
             System.out.println("----------------------------");
+            
             for (int i = 0; i < studentList.size(); i++) {
+                
                 Element student = studentList.get(i);
-                System.out.println("\nCurrent Element :"
-                        + student.getName());
+                
+                System.out.println("\nCurrent Element :" + student.getName());
+                
                 Attribute attribute = student.getAttribute("rollno");
-                System.out.println("Student roll no : "
-                        + attribute.getValue());
-                System.out.println("First Name : "
-                        + student.getChild("firstname").getText());
-                System.out.println("Last Name : "
-                        + student.getChild("lastname").getText());
-                System.out.println("Nick Name : "
-                        + student.getChild("nickname").getText());
-                System.out.println("Marks : "
-                        + student.getChild("marks").getText());
+                Attribute attribute2 = student.getAttribute("lang");
+                
+                System.out.println("Student roll no : " + attribute.getValue());
+                System.out.println("Student favorite language : " + attribute2.getValue());
+                System.out.println("First Name : " + student.getChild("firstname").getText());
+                System.out.println("Last Name : " + student.getChild("lastname").getText());
+                System.out.println("Nick Name : " + student.getChild("nickname").getText());
+                System.out.println("Marks : " + student.getChild("marks").getText());
             }
         } catch (JDOMException e) {
             e.printStackTrace();
