@@ -14,6 +14,7 @@ public class DbConnection {
     public static Connection getConnection(String dbname, String dbUserName, String dbPass){
         try {
             connection = DriverManager.getConnection(url + dbname, dbUserName, dbPass);
+            System.out.println("Connected............");
         } catch (SQLException e) {
             e.printStackTrace();
         }
